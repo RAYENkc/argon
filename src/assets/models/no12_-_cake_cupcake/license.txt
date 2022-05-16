@@ -1,0 +1,11 @@
+Model Information:
+* title:	№12 - cake: Cupcake
+* source:	https://sketchfab.com/3d-models/no12-cake-cupcake-454783f25d8c46ac87969c8f161b1a16
+* author:	Christian Walter (https://sketchfab.com/chrisworld)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "№12 - cake: Cupcake" (https://sketchfab.com/3d-models/no12-cake-cupcake-454783f25d8c46ac87969c8f161b1a16) by Christian Walter (https://sketchfab.com/chrisworld) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

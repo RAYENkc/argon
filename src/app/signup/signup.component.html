@@ -1,0 +1,103 @@
+ <!-- Search Wrapper Area Start -->
+ <div class="search-wrapper section-padding-100">
+    <div class="search-close">
+        <i class="fa fa-close" aria-hidden="true"></i>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="search-content">
+                    <form action="#" method="get">
+                        <input type="search" name="search" id="search" placeholder="Type your keyword...">
+                        <button type="submit"><img src="assets/img/core-img/search.png" alt=""></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search Wrapper Area End -->
+
+<!-- ##### Main Content Wrapper Start ##### -->
+<div class="main-content-wrapper d-flex clearfix">
+
+    <!-- Mobile Nav (max width 767px)-->
+    <div class="mobile-nav">
+        <!-- Navbar Brand -->
+        <div class="amado-navbar-brand">
+            <a routerLink="/home"><img src="assets/img/core-img/logo.png" alt=""></a>
+        </div>
+        <!-- Navbar Toggler -->
+        <div class="amado-navbar-toggler">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <!-- Header Area Start -->
+    <header class="header-area clearfix">
+        <!-- Close Icon -->
+        <div class="nav-close">
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </div>
+        <!-- Logo -->
+        <div class="logo">
+            <a routerLink="/home"><img src="assets/img/core-img/logo.png" alt=""></a>
+        </div>
+        
+    </header>
+    <!-- Header Area End -->
+
+    <div class="cart-table-area section-padding-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div style="margin-left: 200px;" class="col-12 col-lg-7">
+                    <div class="checkout_details_area mt-50 clearfix">
+
+                        <div class="cart-title">
+                            <h2>Sign Up</h2>
+                        </div>
+
+                        <form #addForm="ngForm" (ngSubmit)="onAddMission(addForm)">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" ngModel name="nom" id="first_name" value="" placeholder="First Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" ngModel name="prenom" class="form-control" id="last_name" value="" placeholder="Last Name" required>
+                                </div>
+                                
+                                <div class="col-12 mb-3">
+                                    <input type="email" ngModel name="email" class="form-control"  placeholder="Email" value="">
+                                </div>
+                               
+                                
+                                <div class="col-12 mb-3">
+                                    <input type="text" ngModel name="pass" class="form-control"  placeholder="Password" value="">
+                                </div>
+                                <!-- <div class="col-12 mb-3">
+                                    <input type="text"  class="form-control"  placeholder="Confirm Password" value="">
+                                </div>-->
+                                <div class="col-md-12 mb-3">
+                                    <input type="number" ngModel name="cin" class="form-control"   placeholder="Cin Number" value="">
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <input type="number" ngModel name="phone" class="form-control"   placeholder="Phone Number" value="">
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <input type="file" class="form-control "  (change)="upload($event)"   required >
+                                </div>
+
+                                <div style="margin-left:200px;" class="col-md-5 mb-3">
+                                    <input type="submit" value="Register" class="btn amado-btn w-100">
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ##### Main Content Wrapper End ##### -->

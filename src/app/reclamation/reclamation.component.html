@@ -1,0 +1,262 @@
+<!-- Search Wrapper Area Start -->
+<div class="search-wrapper section-padding-100">
+  <div class="search-close">
+      <i class="fa fa-close" aria-hidden="true"></i>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="search-content">
+                  <form action="#" method="get">
+                      <input type="search" name="search" id="search" placeholder="Type your keyword...">
+                      <button type="submit"><img src="assets/img/core-img/search.png" alt=""></button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Search Wrapper Area End -->
+
+<!-- ##### Main Content Wrapper Start ##### -->
+<div class="main-content-wrapper d-flex clearfix">
+
+  <!-- Mobile Nav (max width 767px)-->
+  <div class="mobile-nav">
+      <!-- Navbar Brand -->
+      <div class="amado-navbar-brand">
+          <a routerLink="/home"><img src="assets/img/core-img/logo.png" alt=""></a>
+      </div>
+      <!-- Navbar Toggler -->
+      <div class="amado-navbar-toggler">
+          <span></span><span></span><span></span>
+      </div>
+  </div>
+
+  <!-- Header Area Start -->
+  <header class="header-area clearfix">
+      <!-- Close Icon -->
+      <div class="nav-close">
+          <i class="fa fa-close" aria-hidden="true"></i>
+      </div>
+      <!-- Logo -->
+      <div class="logo">
+          <a routerLink="/home"><img src="assets/img/core-img/logo.png" alt=""></a>
+      </div>
+      <!-- Amado Nav -->
+      <nav class="amado-nav">
+          <ul>
+              <li ><a routerLink="/home">Home</a></li>
+              <li><a routerLink="/shop">Shop</a></li>
+              <li><a routerLink="/product-details">Product</a></li>
+              <li ><a routerLink="/cart">Cart </a> </li>
+              <li class="active"><a routerLink="/reclamation">Claim</a></li>
+              <li><a routerLink="/command">Command</a></li>
+              <!--    <li><a routerLink="/checkout">Checkout</a></li>   --> 
+              <li><a routerLink="/signin">Sign in</a></li>
+             
+
+          </ul>
+      </nav>
+      <!-- Button Group -->
+      <div class="amado-btn-group mt-30 mb-100">
+          <a routerLink="/home" class="btn amado-btn mb-15">%Discount%</a>
+      </div>
+      <!-- Cart Menu -->
+      <div class="cart-fav-search mb-50">
+          <a routerLink="/cart" class="cart-nav"><img src="assets/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
+          <a routerLink="/home" class="search-nav"><img src="assets/img/core-img/search.png" alt=""> Search</a>
+      </div>
+      <!-- Social Button -->
+      <div class="social-info d-flex justify-content-between">
+          <a routerLink="/home"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+          <a routerLink="/home"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a routerLink="/home"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a routerLink="/home"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      </div>
+  </header>
+  <!-- Header Area End -->
+
+<div class="products-catagories-area clearfix">
+   <div class="amado-pro-catagory clearfix">
+    
+    <div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+
+      <div class="container-fluid">
+       <div class="header-body">
+        <!-- Card stats -->
+      </div>
+    </div>
+  </div>
+  <!-- Page content -->
+  <div class="container-fluid mt--7" id="main-container" >
+    <!-- Table -->
+    <div class="row">
+      <div class="col">
+        <div class="card shadow">
+        <div class="card-header border-0">
+          <a  class="btn btn-info test" (click)="onOpenModal1(null,'add')" >add Claim </a>
+            <h3 class="mb-0">List of claims</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                 <!-- <th scope="col">Nom</th> --> 
+                  <th scope="col">Sujet</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Importance</th>
+            
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody   *ngFor="let claim of claims">
+                <!-- Company -->
+                <tr >
+             
+                  <td>{{claim.sujet}} </td>
+                  <td>{{claim.date_claim }}</td>
+                  <td>{{claim.importance}}</td>
+                  
+                  
+                  <td class="text-right">
+                    <div ngbDropdown placement="bottom-right">
+                      <a class="btn btn-sm btn-icon-only text-success"  ngbDropdownToggle>
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+                        <!--  (click)="onOpenModal1(c,'edit')"   (click)="onOpenModal1(c,'delete')" -->
+                        <a    class="dropdown-item" href="javascript:void(0)" data-original-title="Edit">Edit</a>
+                        <a  class="dropdown-item" href="javascript:void(0)" (click)="onOpenModal1(claim,'delete')">Delete</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+
+
+
+  
+  
+  <!--
+
+  <div class="modal fade" id="updateMissionModal" tabindex="-1" role="dialog" aria-labelledby="updateMissionModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="updateMissionModalLabel">Edit User</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+          <form #editForm="ngForm">
+            <div class="form-group">
+               <label for="firstName">Nom</label>
+               <input type="text" ngModel="{{editMission?.nom}}" name="nom" class="form-control" id="firstName" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Sujet</label>
+              <input type="text" ngModel="{{editMission?.sujet}}" name="suject" class="form-control" id="lastName" placeholder="Last Name">
+           </div>
+            
+            <div class="form-group">
+              <label for="invitationDate">Date</label>
+              <input type="date" ngModel="{{editMission?.date_claim}}" name="date_claim" class="form-control" id="invitationDate" placeholder="Invitation Date">
+           </div>
+            <div class="form-group">
+               <label for="adress">Importance</label>
+               <input type="text" ngModel="{{editMission?.importance}}" name="importance" class="form-control" id="adress" placeholder="Adress">
+            </div>
+            <div class="modal-footer">
+               <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
+               <button (click)="onUpdateMission(editForm.value)" data-dismiss="modal" class="btn btn-primary" >Save changes</button>
+            </div>
+         </form>
+         </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+-->
+</div>
+
+<div class="modal fade" id="deleteMissionModal" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="modal-title" id="deleteModelLabel">Delete Claim</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+           </button>
+        </div>
+        <div class="modal-body">
+           <p>Are you sure you want to delete this mission : {{deleteMission?._id}}?</p>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+              <button (click)="onDeleteMission(deleteMission?._id)" class="btn btn-danger" data-dismiss="modal">Yes</button>
+           </div>
+        </div>
+     </div>
+  </div>
+  </div>
+
+  
+<div class="modal fade" id="addMissionModal" tabindex="-1" role="dialog" aria-labelledby="addMissionModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+       <div class="modal-header">
+          <h5 class="modal-title" id="addMissionModalLabel">Add Claim</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+       </div>
+       <div class="modal-body">
+          <form #addForm="ngForm" (ngSubmit)="onAddMission(addForm)">
+         <!-- <div class="form-group">
+             <label for="destination">Nom</label>
+             <input type="text" ngModel name="nom" class="form-control" id="nom" placeholder="nom" required>
+          </div>
+          <div class="form-group">
+            <label for="startDate"> Date</label>
+            <input type="date" ngModel name="date_claim" class="form-control" id="Date" placeholder="Date" required>
+          </div>
+         --> 
+          <div class="form-group">
+            <label for="missionObject">sujet</label>
+            <input type="text" ngModel name="sujet" class="form-control" id="sujet" placeholder="Sujet" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="missionObject">Importance</label>
+            <input type="text" ngModel name="importance" class="form-control" id="sujet" placeholder="Importance" required>
+          </div>
+
+          <div class="form-group">
+            <label for="destination">Email</label>
+            <input type="text" ngModel name="email" class="form-control" id="nom" placeholder="email" required>
+         </div>
+          <div class="modal-footer">
+             <button type="button" id="add-mission-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary" >Save changes</button>
+          </div>
+          </form>
+       </div>
+    </div>
+  </div>
+  </div>
+  

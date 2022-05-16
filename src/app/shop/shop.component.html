@@ -1,0 +1,174 @@
+<!-- Search Wrapper Area Start -->
+<div class="search-wrapper section-padding-100">
+    <div class="search-close">
+        <i class="fa fa-close" aria-hidden="true"></i>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="search-content">
+                    <form action="#" method="get">
+                        <input type="search" name="search" id="search" placeholder="Type your keyword...">
+                        <button type="submit"><img src="assets/img/core-img/search.png" alt=""></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- Search Wrapper Area End -->
+  
+  <!-- ##### Main Content Wrapper Start ##### -->
+  <div class="main-content-wrapper d-flex clearfix">
+  
+    <!-- Mobile Nav (max width 767px)-->
+    <div class="mobile-nav">
+        <!-- Navbar Brand -->
+        <div class="amado-navbar-brand">
+            <a routerLink="/home"><img src="assets/img/core-img/logo.png" alt=""></a>
+        </div>
+        <!-- Navbar Toggler -->
+        <div class="amado-navbar-toggler">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+  
+    <!-- Header Area Start -->
+    <header class="header-area clearfix">
+        <!-- Close Icon -->
+        <div class="nav-close">
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </div>
+        <!-- Logo -->
+        <div class="logo">
+            <a routerLink="/home"><img src="assets/img/core-img/logo.png" alt=""></a>
+        </div>
+        <!-- Amado Nav -->
+        <nav class="amado-nav">
+            <ul>
+                <li ><a routerLink="/home">Home</a></li>
+                <li class="active"><a routerLink="/shop">Shop</a></li>
+                <li><a routerLink="/product-details">Product</a></li>
+                <li ><a routerLink="/cart">Cart </a> </li>
+                <li ><a routerLink="/reclamation">Claim</a></li>
+                <li><a routerLink="/command">Command</a></li>
+            <!-- <li><a routerLink="/checkout">Checkout</a></li>   --> 
+                <li><a routerLink="/signin">Sign in</a></li>
+               
+  
+            </ul>
+        </nav>
+        <!-- Button Group -->
+        <div class="amado-btn-group mt-30 mb-100">
+            <a routerLink="/home" class="btn amado-btn mb-15">%Discount%</a>
+        </div>
+        <!-- 
+        <div class="cart-fav-search mb-5" style="padding-top: 0px;">
+            <a routerLink="/cart" class="cart-nav"><img src="assets/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
+            <a routerLink="/home" class="search-nav"><img src="assets/img/core-img/search.png" alt=""> Search</a>
+        </div>
+        -->
+        <!--  
+        <div class="social-info d-flex justify-content-between">
+            <a routerLink="/home"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            <a routerLink="/home"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a routerLink="/home"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a routerLink="/home"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+        -->
+    </header>
+    <!-- Header Area End -->
+
+        <div class="shop_sidebar_area">
+
+            <!-- ##### Single Widget ##### -->
+            <div class="widget catagory mb-50">
+                <!-- Widget Title -->
+                <h6 class="widget-title mb-30">Catagories</h6>
+
+                <!--  Catagories  -->
+                <div class="catagories-menu">
+                    <ul>
+                        <li ><a [ngStyle]="{'color': cat=='all' ? '#fbb710' : (cat!='all' ? 'black' : null) }" (click)="catagory('all')"> All </a> </li>
+                        <li ><a  [ngStyle]="{'color': cat=='cupcake' ? '#fbb710' : (cat!='cupcake' ? 'black' : null)}" (click)="catagory('cupcake')">Cheesecake</a></li>
+                        <li ><a [ngStyle]="{'color': cat=='gateau' ? '#fbb710' : (cat!='gateau' ? 'black' : null)}"  (click)="catagory('gateau')">Gâteau Anniversaire</a></li>
+                        <li ><a  [ngStyle]="{'color': cat=='mug' ? '#fbb710' : (cat!='mug' ? 'black' : null)}" (click)="catagory('mug')">Mug </a></li>
+                        <li><a [ngStyle]="{'color': cat=='assiette' ? '#fbb710' : (cat!='assiette' ? 'black' : null)}" (click)="catagory('assiette')">Assiette </a></li>
+                        <li><a [ngStyle]="{'color': cat=='Chapeau' ? '#fbb710' : (cat!='Chapeau' ? 'black' : null)}" (click)="catagory('Chapeau')">Chapeau </a></li>
+                        <li><a [ngStyle]="{'color': cat=='Piece Montée' ? '#fbb710' : (cat!='Piece Montée' ? 'black' : null)}" (click)="catagory('Piece Montée')">Piece Montée</a></li>
+                        <li><a [ngStyle]="{'color': cat=='Box' ? '#fbb710' : (cat!='Box' ? 'black' : null)}" (click)="catagory('Box')">Box Cadeau</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="amado_product_area section-padding-100">
+            <div class="container-fluid">
+               
+                <div class="row ">
+                    
+<!-- Single Product Area -->
+
+<div class="col-12 col-sm-6 col-md-12 col-xl-6" >
+    <div class="single-product-wrapper"   *ngFor="let cand of produits"  >
+    
+        <!-- Product Image -->
+        <div class="product-img">
+          <a routerLink="/shop">
+              <img src="http://localhost:3000/uploads/{{cand.image}}" alt="">
+              <!-- Hover Content -->
+              <div class="hover-content">
+                  <div class="line"></div>
+                  
+                  
+              </div>
+          </a>
+       
+        </div>
+  
+        <!-- Product Description -->
+        <div class="product-description d-flex align-items-center justify-content-between">
+            <!-- Product Meta Data -->
+            <div class="product-meta-data">
+                <div class="line"></div>
+                <p class="product-price">${{cand.prix}}</p>
+                <a href="product-details.html">
+                    <h6>{{cand.nom}}</h6>
+                </a>
+            </div>
+            <!-- Ratings & Cart -->
+            <div class="ratings-cart text-right">
+                <div class="ratings">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="cart">
+                    <a  data-toggle="tooltip" data-placement="left" title="Add to Cart" (click)=addtocart(cand)><img src="assets/img/core-img/cart.png" alt=""></a>
+                    <div style="font-size: 10px;" class="badge bg-danger"><span *ngIf=" cand.quantite != '0'"> {{cand.quantite}}</span></div>
+                   <!-- <a routerLink="/product-configuator" data-toggle="tooltip" data-placement="left" title="Modifier product "><img src="assets/img/core-img/cart.png" alt=""></a>  --> 
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+                    <div class="col-12">
+                        <!-- Pagination -->
+                        <nav aria-label="navigation">
+                            <ul class="pagination justify-content-end mt-50">
+                                <li class="page-item active"><a class="page-link" routerLink="/shop">01.</a></li>
+                                <li class="page-item"><a class="page-link" routerLink="/shop">02.</a></li>
+                                <li class="page-item"><a class="page-link" routerLink="/shop">03.</a></li>
+                                <li class="page-item"><a class="page-link" routerLink="/shop">04.</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    <!-- ##### Main Content Wrapper End ##### -->

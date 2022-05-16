@@ -1,0 +1,293 @@
+<!-- Search Wrapper Area Start -->
+<div class="search-wrapper section-padding-100">
+    <div class="search-close">
+        <i class="fa fa-close" aria-hidden="true"></i>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="search-content">
+                    <form action="#" method="get">
+                        <input type="search" name="search" id="search" placeholder="Type your keyword...">
+                        <button type="submit"><img src="assets/img/core-img/search.png" alt=""></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search Wrapper Area End -->
+
+<!-- ##### Main Content Wrapper Start ##### -->
+<div class="main-content-wrapper d-flex clearfix">
+
+    <!-- Mobile Nav (max width 767px)-->
+    <div class="mobile-nav">
+        <!-- Navbar Brand -->
+        <div class="amado-navbar-brand">
+            <a routerLink="/home"><img src="assets/img/core-img/logo.png" alt=""></a>
+        </div>
+        <!-- Navbar Toggler -->
+        <div class="amado-navbar-toggler">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <!-- Header Area Start -->
+    <header class="header-area clearfix">
+        <!-- Close Icon -->
+        <div class="nav-close">
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </div>
+        <!-- Logo -->
+        <div class="logo">
+            <a routerLink="/home"><img src="assets/img/core-img/logo.png" alt=""></a>
+        </div>
+        <!-- Amado Nav -->
+        <nav class="amado-nav">
+            <ul>
+                <li ><a routerLink="/home">Home</a></li>
+                <li><a routerLink="/shop">Shop</a></li>
+                <li><a routerLink="/product-details">Product</a></li>
+                <li><a routerLink="/cart">Cart </a> </li>
+                <li><a routerLink="/reclamation">Claim</a></li>
+                <li  class="active"><a routerLink="/command">Command</a></li>
+                 <!--    <li><a routerLink="/checkout">Checkout</a></li>   --> 
+                <li><a routerLink="/signin">Sign in</a></li>           
+            </ul>
+        </nav>
+        <!-- Button Group -->
+        <div class="amado-btn-group mt-30 mb-100">
+            <a routerLink="/home" class="btn amado-btn mb-15">%Discount%</a>
+        </div>
+        <!-- Cart Menu -->
+        <div class="cart-fav-search mb-50">
+            <a routerLink="/cart" class="cart-nav"><img src="assets/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
+            <a routerLink="/home" class="search-nav"><img src="assets/img/core-img/search.png" alt=""> Search</a>
+        </div>
+        <!-- Social Button -->
+        <div class="social-info d-flex justify-content-between">
+            <a routerLink="/home"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            <a routerLink="/home"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a routerLink="/home"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a routerLink="/home"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+
+
+    <div class="products-catagories-area clearfix">
+        <div class="amado-pro-catagory clearfix">
+         
+         <div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+     
+           <div class="container-fluid">
+            <div class="header-body">
+             <!-- Card stats -->
+           </div>
+         </div>
+       </div>
+       <!-- Page content -->
+       <div class="container-fluid mt--7" id="main-container" >
+         <!-- Table -->
+         <div class="row">
+           <div class="col">
+             <div class="card shadow">
+             <div class="card-header border-0">
+              <!-- <a  class="btn btn-info test" >add Claim </a> --> 
+                 <h3 class="mb-0">List of commands</h3>
+                 <a  class="test" >
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Taper le nom de profil"    type="text"  >
+                    </div>
+                  </div>
+               
+                </a>
+               <div class="table-responsive">
+                 <table class="table align-items-center table-flush"  >
+                   <thead class="thead-light">
+                     <tr>
+                       <th scope="col">Code</th>
+                       <th scope="col">Date</th>
+                       <th scope="col">Status</th>
+                       <th scope="col">Amount</th>                 
+                       <th scope="col"></th>
+                     </tr>
+                   </thead>
+                   <tbody *ngFor="let command of commands">
+                     <!-- Company -->
+                     <tr >
+                  
+                       <td> 
+                        {{command._id}}
+                       </td>
+                       <td>
+                        {{command.date_ajout | date}}
+                       </td>
+                       <td>
+                        {{command.status}}
+                       </td>
+                       <td>
+                        {{command.total}}
+                       </td>
+                       
+                       <td class="text-right">
+                         <div ngbDropdown placement="bottom-right">
+                           <a class="btn btn-sm btn-icon-only text-success"  ngbDropdownToggle>
+                             <i class="fas fa-ellipsis-v"></i>
+                           </a>
+                           <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+                             <!--  (click)="onOpenModal1(c,'edit')"   (click)="onOpenModal1(c,'delete')" -->
+                             <a    class="dropdown-item" href="javascript:void(0)" data-original-title="Edit" (click)="onOpenModal1(command,'affiche')">Affiche</a>
+                             <a    class="dropdown-item" href="javascript:void(0)" data-original-title="Edit" (click)="onOpenModal1(command,'edit')">Edit</a>
+                             <a  class="dropdown-item" href="javascript:void(0)" (click)="onOpenModal1(command,'download')"> Download PDF </a>
+                             <a  class="dropdown-item" href="javascript:void(0)" (click)="onOpenModal1(command,'delete')">Delete</a>
+                           </div>
+                         </div>
+                       </td>
+                     </tr>
+                   </tbody>
+                 </table>
+               </div>
+             </div>
+           </div>
+         </div>
+     
+       </div>
+     </div>
+     
+
+    </div>
+
+   </div>    
+  </div> 
+      
+       <div class="modal fade" id="deleteCommand" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="deleteModelLabel">Delete Command</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+             </div>
+             <div class="modal-body">
+                <p>Are you sure you want to delete this command : {{deleteCommand?._id}}?</p>
+                <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                   <button (click)="onDeleteMission(deleteCommand?._id)" class="btn btn-danger" data-dismiss="modal">Yes</button>
+                </div>
+             </div>
+          </div>
+       </div>
+       </div>
+     <div class="modal fade" id="afficheModal" tabindex="-1" role="dialog" aria-labelledby="afficheModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document" >
+        <div class="modal-content" >
+           <div class="modal-header">
+              <h5 class="modal-title" id="afficheModalLabel">List of product </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+           </div>
+           <div class="modal-body"  >
+            
+              <div class="form-group">
+                <table class="table align-items-center table-flush " >
+                  <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Sr.No</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Product Image</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                
+                    </tr>
+    
+                  </thead>
+                  <tbody>
+                    <!-- Company -->
+                   <tr *ngFor="let item of products; let i = index">
+                               
+                                <td>{{i+1}}</td>
+                                <td>{{item.nom}}</td>
+                                <td><img style="width: 120px;" src="http://localhost:3000/uploads/{{item.image}}" alt=""></td>
+                                <td style="width: 25%;">{{item.description}}</td>
+                                <th style="width: 12%;">{{item.prix}}</th>
+                                <td style="width: 12%;">{{item.quantite}}</td>
+                                <td style="width: 12%;">{{item.prix * item.quantite}}</td>
+                            </tr>
+                  </tbody>
+                </table>
+              </div>
+           </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="modal fade" id="updateMissionModal" tabindex="-1" role="dialog" aria-labelledby="updateMissionModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="updateMissionModalLabel">Edit User</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+             </div>
+             <div class="modal-body">
+              <form #editForm="ngForm">
+               <!-- 
+                <div class="form-group">
+                   <label for="firstName">Nom</label>
+                   <input type="text" ngModel="{{editMission?.nom}}" name="nom" class="form-control" id="firstName" placeholder="First Name">
+                </div>
+               -->
+                <div class="form-group">
+                  <label for="status">Status</label>
+                  <input type="text" ngModel="{{editMission?.status}}" name="status" class="form-control" id="lastName" placeholder="Last Name">
+               </div>
+                   
+              <div class="form-group">
+                <table class="table align-items-center table-flush " >
+                  <thead class="thead-light">
+                    <tr>
+                     
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Product Image</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                
+                    </tr>
+    
+                  </thead>
+                  <tbody>
+                    <!-- Company -->
+                   <tr *ngFor="let item of editMission?.products; let i = index"  name="produits">
+                               
+                                
+                                <td>{{item.nom}}</td>
+                                <td><img style="width: 120px;" src="http://localhost:3000/uploads/{{item.image}}" alt=""></td>
+                                <th style="width: 12%;">{{item.prix}}</th>
+                                <td style="width: 12%;"><input type="number" ngModel="{{item.quantite}}" name="quantite" class="form-control" id="adress" placeholder="Adress"></td>
+                               
+                            </tr>
+                  </tbody>
+                </table>
+              </div>
+                <div class="modal-footer">
+                   <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                   <button (click)="onUpdateMission(editForm.value)" data-dismiss="modal" class="btn btn-primary" >Save changes</button>
+                </div>
+             </form>
+             </div>
+          </div>
+        </div>
+      </div>

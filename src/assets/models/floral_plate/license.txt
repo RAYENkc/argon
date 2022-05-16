@@ -1,0 +1,11 @@
+Model Information:
+* title:	Floral Plate
+* source:	https://sketchfab.com/3d-models/floral-plate-b3f6e9bf6afd410491017364994c7767
+* author:	IUPUI University Library (https://sketchfab.com/iupuiul)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Floral Plate" (https://sketchfab.com/3d-models/floral-plate-b3f6e9bf6afd410491017364994c7767) by IUPUI University Library (https://sketchfab.com/iupuiul) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

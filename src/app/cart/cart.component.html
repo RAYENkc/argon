@@ -1,0 +1,261 @@
+<!-- Search Wrapper Area Start -->
+<div class="search-wrapper section-padding-100">
+    <div class="search-close">
+        <i class="fa fa-close" aria-hidden="true"></i>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="search-content">
+                    <form action="#" method="get">
+                        <input type="search" name="search" id="search" placeholder="Type your keyword...">
+                        <button type="submit"><img src="assets/img/core-img/search.png" alt=""></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search Wrapper Area End -->
+
+<!-- ##### Main Content Wrapper Start ##### -->
+<div class="main-content-wrapper d-flex clearfix">
+
+    <!-- Mobile Nav (max width 767px)-->
+    <div class="mobile-nav">
+        <!-- Navbar Brand -->
+        <div class="amado-navbar-brand">
+            <a routerLink="/home"><img src="assets/img/core-img/logo.png" alt=""></a>
+        </div>
+        <!-- Navbar Toggler -->
+        <div class="amado-navbar-toggler">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <!-- Header Area Start -->
+    <header class="header-area clearfix">
+        <!-- Close Icon -->
+        <div class="nav-close">
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </div>
+        <!-- Logo -->
+        <div class="logo">
+            <a routerLink="/home"><img src="assets/img/core-img/logo.png" alt=""></a>
+        </div>
+        <!-- Amado Nav -->
+        <nav class="amado-nav">
+            <ul>
+                <li ><a routerLink="/home">Home</a></li>
+                <li><a routerLink="/shop">Shop</a></li>
+                <li><a routerLink="/product-details">Product</a></li>
+                <li class="active"><a routerLink="/cart">Cart </a> </li>
+                <li><a routerLink="/reclamation">Claim</a></li>
+                <li><a routerLink="/command">Command</a></li>
+                 <!--    <li><a routerLink="/checkout">Checkout</a></li>   --> 
+                <li><a routerLink="/signin">Sign in</a></li>
+               
+
+            </ul>
+        </nav>
+        <!-- Button Group -->
+        <div class="amado-btn-group mt-30 mb-100">
+            <a routerLink="/home" class="btn amado-btn mb-15">%Discount%</a>
+        </div>
+        <!-- Cart Menu -->
+        <div class="cart-fav-search mb-50">
+            <a routerLink="/cart" class="cart-nav"><img src="assets/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
+            <a routerLink="/home" class="search-nav"><img src="assets/img/core-img/search.png" alt=""> Search</a>
+        </div>
+        <!-- Social Button -->
+        <div class="social-info d-flex justify-content-between">
+            <a routerLink="/home"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            <a routerLink="/home"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a routerLink="/home"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a routerLink="/home"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+<div class="products-catagories-area clearfix ">
+   <div class="amado-pro-catagory clearfix ">
+    
+    <div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+
+      <div class="container-fluid">
+       <div class="header-body">
+        <!-- Card stats -->
+      </div>
+    </div>
+  </div>
+  <!-- Page content -->
+  <ng-container *ngIf="products.length !=0">
+  <div class="container-fluid mt--7" id="main-container" >
+    <!-- Table -->
+    <div class="row">
+      <div class="col">
+        <div class="card shadow tail">
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush ">
+              <thead class="thead-light">
+                <tr>
+                    <th scope="col" >
+                        <div class="form-check form-switch"> 
+                            <input  class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"> 
+                            <label class="form-check-label" for="flexSwitchCheckDefault">All</label>
+                        </div>
+                    </th>
+                    <th scope="col">Sr.No</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Image</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Action</th>
+                </tr>
+
+              </thead>
+              <tbody>
+                <!-- Company -->
+               <tr *ngFor="let item of products; let i = index">
+                            <td> <div class="form-check"> <input (click)="addItem(item)" class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> </div></td>
+                            <td>{{i+1}}</td>
+                            <td>{{item.nom}}</td>
+                            <td><img style="width: 120px;" src="http://localhost:3000/uploads/{{item.image}}" alt=""></td>
+                            <td style="width: 25%;">{{item.description}}</td>
+                            <th style="width: 12%;">{{item.prix}}</th>
+                            <td style="width: 12%;"><input type="number" id="techtacles" name="tentacles" min="1" max="100" [value]="item.quantite" > </td>
+                            <td style="width: 12%;">{{item.prix * item.quantite}}</td>
+
+                            <td class="text-right">
+                                <div ngbDropdown placement="bottom-right">
+                                  <a class="btn btn-sm btn-icon-only d-inline-block text-success"  ngbDropdownToggle>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                  </a>
+                                  <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+                                   
+                                    <a    class="dropdown-item" href="javascript:void(0)" data-original-title="Edit">Edit</a>
+                                    <a  class="dropdown-item" href="javascript:void(0)" (click)="removeItem(item)">Delete</a>
+                                  </div>
+                                </div>
+                            </td>
+                          <!--
+                            <td>
+                                <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+
+                          -->  
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
+                            <td><button (click)="onAddCommande()" class="btn btn-danger">Bye</button></td>
+                            <td><button routerLink="/shop" class="btn btn-primary">Shop More</button></td>
+                            <td><strong>Grand Total : ${{grandTotal}}</strong></td>
+                        </tr>
+                  
+                 
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ng-container>
+
+<ng-container *ngIf="products.length ==0">
+    <div class="container-fluid mt--7" id="main-container" >
+        <div class="row">
+            <div class="col">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+            <h4>Your cart is empty!</h4>
+            <h6>Add item to it now</h6>
+            
+            <button routerLink="/shop" class=" btn amado-btn mb-10 " style="top: 2px;">Shop Now</button>
+        </div>
+    </div>
+</div>
+    </div>
+</ng-container>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!--
+
+<ng-container *ngIf="products.length !=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of products; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.title}}</td>
+                            <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
+                            <td style="width: 25%;">{{item.description}}</td>
+                            <th style="width: 12%;">{{item.price}}</th>
+                            <td style="width: 12%;">{{item.quantity}}</td>
+                            <td style="width: 12%;">{{item.total}}</td>
+                            <td>
+                                <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
+                            <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
+                            <td><button class="btn btn-success">Checkout</button></td>
+                            <td><strong>Grand Total : ${{grandTotal}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="products.length ==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+            <h4>Your cart is empty!</h4>
+            <h6>Add item to it now</h6>
+            <button routerLink="/products" class="btn btn-primary">Shop Now</button>
+        </div>
+    </div>
+</ng-container>
+
+
+-->

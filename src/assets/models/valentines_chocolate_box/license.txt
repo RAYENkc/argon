@@ -1,0 +1,11 @@
+Model Information:
+* title:	Valentine's chocolate box
+* source:	https://sketchfab.com/3d-models/valentines-chocolate-box-655b7e468b7b419f8872c48d3654a1e0
+* author:	Jacob.Elhatmi (https://sketchfab.com/Jacob.Elhatmi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Valentine's chocolate box" (https://sketchfab.com/3d-models/valentines-chocolate-box-655b7e468b7b419f8872c48d3654a1e0) by Jacob.Elhatmi (https://sketchfab.com/Jacob.Elhatmi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,20 @@
+# Aspose.3D Wavefront OBJ Exporter
+# Copyright 2004-2022 Aspose Pty Ltd.
+# File created: 04/20/2022 22:27:52
+
+newmtl giftbox
+	Ka 0.2 0.2 0.2
+	Kd 0.36926983470546312 0 0
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.2 0.2 0.2
+	Ns 20
+newmtl giftbox_tape
+	Ka 0.2 0.2 0.2
+	Kd 0.78391446528613296 0 0
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.2 0.2 0.2
+	Ns 20

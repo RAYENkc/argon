@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cup and plate
+* source:	https://sketchfab.com/3d-models/cup-and-plate-d9a67048ec164c569fb274bae2a6cda0
+* author:	dendromery (https://sketchfab.com/dendromery)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cup and plate" (https://sketchfab.com/3d-models/cup-and-plate-d9a67048ec164c569fb274bae2a6cda0) by dendromery (https://sketchfab.com/dendromery) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

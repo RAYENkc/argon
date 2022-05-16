@@ -1,0 +1,11 @@
+Model Information:
+* title:	Day_3_cake
+* source:	https://sketchfab.com/3d-models/day-3-cake-48ad54c5445e46488391fa8ea688d2aa
+* author:	LikeTea (https://sketchfab.com/LikeTea)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Day_3_cake" (https://sketchfab.com/3d-models/day-3-cake-48ad54c5445e46488391fa8ea688d2aa) by LikeTea (https://sketchfab.com/LikeTea) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
